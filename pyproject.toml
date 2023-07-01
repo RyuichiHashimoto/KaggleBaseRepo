@@ -44,6 +44,7 @@ treelite-runtime = "3.0.1"
 treelite = "3.0.1"
 xgboost = "1.6.2"
 catboost = "^1.1.1"
+jupyterlab = "3.5.3"
 
 
 
