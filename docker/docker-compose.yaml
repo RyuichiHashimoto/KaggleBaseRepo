@@ -18,6 +18,8 @@ services:
     container_name: Research
     runtime: nvidia
 
+    ports:
+      - 8000:8888
     command: poetry run jupyter-lab --no-browser --port=8888 --ip=0.0.0.0 --allow-root --NotebookApp.token='' --NotebookApp.notebook_dir='/home/work'
     #command: sleep 400000
 
