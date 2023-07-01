@@ -1,0 +1,11 @@
+.bash_history
+.cache/
+.ipython/
+.jupyter/
+.local/
+.python_history
+.viminfo
+.vscode-server/
+__pycache__/
+
+.ipynb_checkpoints/
