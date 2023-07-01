@@ -38,5 +38,5 @@ curl -sSL https://install.python-poetry.org | python3.9 -  && \
 cd /usr/local/bin && ln -s /opt/poetry/bin/poetry &&\
 poetry config --local virtualenvs.in-project true
 
-
+RUN apt install build-essential
 #USER $USERNAME
