@@ -1,0 +1,8 @@
+{
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "/home/work/.cache/pypoetry/virtualenvs/godaddy-3UyvmeC2-py3.9/bin/black",
+    "python.formatting.blackArgs": [
+        "--line-length=120"
+    ],
+    "editor.defaultFormatter": "ms-python.black-formatter"
+}

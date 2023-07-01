@@ -1,0 +1,2 @@
+class ModelWrapperError(Exception):
+    """hogehoge"""
