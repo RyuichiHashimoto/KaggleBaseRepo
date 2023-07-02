@@ -10,13 +10,6 @@ Vector: TypeAlias = Tuple[Value, Value]
 Matrix: TypeAlias = Tuple[Vector, Vector]
 
 
-@dataclass(frozen=True)
-class Norm2dParameter:
-    myu: Vector
-    sigma: Matrix
-    samples: int
-
-
 class Dataset:
     def __init__(self) -> None:
         self.X_COLUMNS: Tuple[str, str] = ("x1", "x2")
