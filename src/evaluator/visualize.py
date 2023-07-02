@@ -39,7 +39,7 @@ def joinplot(
     if x2 is None:
         x2 = dataset.X_COLUMNS[1]
 
-    result = sns.jointplot(data=dataset.data, x=x1, y=x2, color="red", hue=hue)
+    result = sns.jointplot(data=dataset.data, x=x1, y=x2, hue=hue)
 
     if output_file_path is not None:
         if len(output_file_path.split("/")) != 1:

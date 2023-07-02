@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from .dataset import Dataset
-from typing import Tuple, Iterable, Union, List
+from typing import Tuple, Iterable, Union, List, Any, Dict
 from typing_extensions import TypeAlias
 import numpy as np
 import polars as pl
@@ -16,11 +16,41 @@ class Norm2dParameter:
     sigma: Matrix
     samples: int
 
+    @classmethod
+    def from_dict(cls, data: Union[Dict[str, Any], "Norm2dParameter"]) -> "Norm2dParameter":
+        """
+        辞書から当該クラスを返す。もし当該クラスのインスタンスが来たらそのまま返す。
+
+        Parameters
+        ----------
+        data : Union[Dict[str, Any], Norm2dParameter]
+            今回の場合、{'myu': [0,0], 'sigma': [[1,0],[0,1]], samples: 1000}などのように設定していれば
+            それをデータクラス化したやつを返す。
+
+        Returns
+        -------
+        Norm2dParameter
+
+        Raises
+        ------
+        TypeError
+            辞書型もしくは当該インスタンス以外が引数に指定された場合に例外を返す。
+        """
+        if isinstance(data, dict):
+            return cls(**data)
+        elif isinstance(data, cls):
+            return data
+        else:
+            raise TypeError("Expected dict or ExampleClass instance")
+
+
+ARG_Parameter: TypeAlias = Iterable[Union[Norm2dParameter, Dict[str, Any]]]
+
 
 class Norm2dDataset(Dataset):
-    def __init__(self, parameters: Iterable[Norm2dParameter]):
+    def __init__(self, parameters: Iterable[ARG_Parameter]):
         super().__init__()
-        self.parameters = parameters
+        self.parameters = [Norm2dParameter.from_dict(param) for param in parameters]
 
         self.X_COLUMNS: Tuple[str, str] = ("x1", "x2")
         self.Y_COLUMN: str = "y"
