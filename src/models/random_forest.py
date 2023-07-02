@@ -4,19 +4,25 @@ from typing_extensions import TypeAlias
 from typing import Iterable, Union, Dict, Any
 from .exception import ModelWrapperError
 from .model_wrapper import model_wrapper, Parameter
+from sklearn.ensemble import RandomForestClassifier as RF
+
+try:
+    from cuml.ensemble import RandomForestClassifier as cuRF
+except ImportError:
+    pass
 
 
 @dataclass(frozen=True)
-class LogisticRegression_Parameter(Parameter):
-    penalty: str
+class RandomForest_Parameter(Parameter):
+    cuda: bool = False
 
 
-ARG_Parameter: TypeAlias = Iterable[Union[LogisticRegression_Parameter, Dict[str, Any]]]
+ARG_Parameter: TypeAlias = Iterable[Union[RandomForest_Parameter, Dict[str, Any]]]
 
 
-class LogisticRegression(model_wrapper):
+class RandomForest(model_wrapper):
     def __init__(self, parameter: ARG_Parameter):
-        self.parameter = LogisticRegression_Parameter.from_dict(parameter)
+        self.parameter = RandomForest_Parameter.from_dict(parameter)
         self.__model = self._init_model()
 
     def train(self, X, y):
@@ -33,12 +39,15 @@ class LogisticRegression(model_wrapper):
         return self.__model.predict_proba(X)
 
     def setup(self, parameter: ARG_Parameter):
-        self.param = LogisticRegression_Parameter.from_dict(parameter)
+        self.param = RandomForest_Parameter.from_dict(parameter)
         self.__model = self._init_model()
 
     def close(self):
         raise NotImplementedError()
 
     def _init_model(self):
-        self.__model = sklearn_LogisticRegression(penalty=self.parameter.penalty)
+        if self.parameter.cuda:
+            self.__model = cuRF()
+        else:
+            self.__model = RF()
         self.__is_learned = False

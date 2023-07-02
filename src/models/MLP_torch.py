@@ -1,40 +1,68 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import numpy as np
 from tqdm import tqdm
+import polars as pl
+from .exception import ModelWrapperError, ModelAlreadyLearnedError
+from .model_wrapper import model_wrapper, Parameter
+from typing_extensions import TypeAlias
+from typing import Iterable, Union, Dict, Any
+from dataclasses import dataclass
 
-from .exception import ModelWrapperError
-from .model_wrapper import model_wrapper
+
+@dataclass(frozen=True)
+class MLP_Parameter(Parameter):
+    inputdim: int
+    epochs: int
+    lr: float
+    cuda: bool = False
+
+
+ARG_Parameter: TypeAlias = Iterable[Union[MLP_Parameter, Dict[str, Any]]]
 
 
 class MLP(model_wrapper):
-    def train(self, X, y):
-        if self.__model is not None:
+    def __init__(self, parameter: ARG_Parameter):
+        self.parameter = MLP_Parameter.from_dict(parameter)
+        self._init_model()
+        self.__is_trained = False
+
+    def train(self, X: pl.DataFrame, y: pl.DataFrame):
+        if self.__model is None:
             self._init_model()
+        if self.__is_trained:
+            raise ModelAlreadyLearnedError()
 
-        self.__model.fit(X, y)
-        self.__is_learned = True
+        X_Tensor = torch.from_numpy(X.to_numpy()).float()
+        y_Tensor = torch.from_numpy(y.to_numpy()).float()
 
-    def predict_proba(self, X):
-        if not self.__is_learned:
+        _train(self.__model, X_Tensor, y_Tensor, self.parameter)
+
+        self.__is_trained = True
+
+    def predict_proba(self, X: pl.DataFrame) -> np.ndarray:
+        if not self.__is_trained:
             raise ModelWrapperError("the model is not learned")
 
-        return self.__model.predict_proba(X)
+        X_Tensor = torch.from_numpy(X.to_numpy()).float()
 
-    def setup(self, parameter: dict):
+        return _predict(self.__model, X_Tensor, self.parameter).numpy()
+
+    def setup(self, parameter):
         raise NotImplementedError()
 
     def close(self):
         raise NotImplementedError()
 
     def _init_model(self):
-        self.__model = MLP_Torch(2)
-        self.__is_learned = False
+        self.__model = MLP_Torch(self.parameter.inputdim)
+        self.__is_trained = False
 
 
 class MLP_Torch(nn.Module):
     def __init__(self, input_dim):
-        super(MLP, self).__init__()
+        super(MLP_Torch, self).__init__()
         self.fc1 = nn.Linear(input_dim, 10)
         self.fc2 = nn.Linear(10, 1)
         self.F = F.relu
@@ -46,14 +74,17 @@ class MLP_Torch(nn.Module):
         return self.sigmoid(x)
 
 
-def _fit(model: nn.Module, X, y, epoch: int = 3000, cuda: bool = False):
+def _train(model: nn.Module, X: torch.Tensor, y: torch.Tensor, parameter: MLP_Parameter) -> None:
     criterion = nn.BCELoss()
-    optimizer = torch.optim.AdamW(model.parameters(), lr=0.01)
+    optimizer = torch.optim.AdamW(model.parameters(), lr=parameter.lr)
 
-    if cuda:
+    if parameter.cuda:
+        model = model.cuda()
         criterion = criterion.cuda()
+        X = X.cuda()
+        y = y.cuda()
 
-    for i in tqdm(range(epoch)):
+    for i in tqdm(range(parameter.epochs)):
         optimizer.zero_grad()
         output = model(X)
         loss = criterion(output, y)
@@ -61,7 +92,13 @@ def _fit(model: nn.Module, X, y, epoch: int = 3000, cuda: bool = False):
         optimizer.step()
 
 
-def _predict(model: nn.Module, X):
+def _predict(model: nn.Module, X: torch.Tensor, parameter: MLP_Parameter) -> torch.Tensor:
+    if parameter.cuda:
+        X = X.cuda()
+
     with torch.no_grad():
         pred = model(X)
+
+    if parameter.cuda:
+        pred = pred.cpu()
     return pred
