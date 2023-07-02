@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from .dataset import Dataset
+from .dataset import Dataset, Parameter
 from typing import Tuple, Iterable, Union, List, Any, Dict
 from typing_extensions import TypeAlias
 import numpy as np
@@ -11,37 +11,10 @@ Matrix: TypeAlias = Tuple[Vector, Vector]
 
 
 @dataclass(frozen=True)
-class Norm2dParameter:
+class Norm2dParameter(Parameter):
     myu: Vector
     sigma: Matrix
     samples: int
-
-    @classmethod
-    def from_dict(cls, data: Union[Dict[str, Any], "Norm2dParameter"]) -> "Norm2dParameter":
-        """
-        辞書から当該クラスを返す。もし当該クラスのインスタンスが来たらそのまま返す。
-
-        Parameters
-        ----------
-        data : Union[Dict[str, Any], Norm2dParameter]
-            今回の場合、{'myu': [0,0], 'sigma': [[1,0],[0,1]], samples: 1000}などのように設定していれば
-            それをデータクラス化したやつを返す。
-
-        Returns
-        -------
-        Norm2dParameter
-
-        Raises
-        ------
-        TypeError
-            辞書型もしくは当該インスタンス以外が引数に指定された場合に例外を返す。
-        """
-        if isinstance(data, dict):
-            return cls(**data)
-        elif isinstance(data, cls):
-            return data
-        else:
-            raise TypeError("Expected dict or ExampleClass instance")
 
 
 ARG_Parameter: TypeAlias = Iterable[Union[Norm2dParameter, Dict[str, Any]]]
@@ -65,7 +38,7 @@ class Norm2dDataset(Dataset):
             data = np.random.multivariate_normal(param.myu, param.sigma, param.samples)
 
             df = pl.DataFrame({self.X_COLUMNS[0]: data[:, 0], self.X_COLUMNS[1]: data[:, 1]})
-            df = df.with_columns(pl.lit(str(idx)).alias(self.Y_COLUMN))
+            df = df.with_columns(pl.lit(int(idx)).alias(self.Y_COLUMN).cast(int))
 
             df_list.append(df)
 
