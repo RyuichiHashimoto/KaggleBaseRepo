@@ -47,3 +47,39 @@ def joinplot(
             os.makedirs(directory, exist_ok=True)
 
         result.savefig(output_file_path)
+
+
+def histplot(
+    dataset: Dataset, x: str, hue: Optional[str], bins: int = 30, output_file_path: Optional[str] = None
+) -> None:
+    """joinplot（散布図＋ヒストグラム）を描画するための関数
+
+    Parameters
+    ----------
+    dataset : Dataset
+        データセットクラス
+
+    x : str, optional
+        histplotするときのx軸
+
+    hue : str, optional
+        データの色分けするときに使用するラベル。
+        もし設定されていない場合は、
+
+    bins:
+        データ範囲を等間隔に区切ったビンの数
+
+
+    output_file_path: str, optional
+        ファイル出力するときのパス
+        もし指定していなければ、ファイル保存しない。
+    """
+
+    result = sns.histplot(dataset.data, x=x, hue=hue, bins=bins)
+
+    if output_file_path is not None:
+        if len(output_file_path.split("/")) != 1:
+            directory = "/".join(output_file_path.split("/")[:-1])
+            os.makedirs(directory, exist_ok=True)
+
+        result.savefig(output_file_path)
