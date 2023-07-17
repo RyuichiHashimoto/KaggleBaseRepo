@@ -65,7 +65,12 @@ class Norm2dDataset(Dataset):
             raise ValueError(f"you must only polars.Series or np.ndarray, not {type(value)}")
 
     def __getitem__(self, key: Union[str, List[str]]) -> pl.DataFrame:
-        return self.__data.select(key)
+        if type(key) is str:
+            return self.__data.get_column(key)
+        elif type(key) is List[str]:
+            return self.__data.select(key)
+        else:
+            raise TypeError()
 
     def _add_row(self, row: pl.Series) -> None:
         self.__data = self.__data.with_columns(row)
