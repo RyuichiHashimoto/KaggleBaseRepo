@@ -64,7 +64,12 @@ class Dataset:
 
     @abstractmethod
     def __getitem__(self, key: Union[str, List[str]]) -> pl.DataFrame:
-        return self.__data.select(key)
+        if type(key) is str:
+            return self.__data.get_column(key)
+        elif type(key) is List[str]:
+            return self.__data.select(key)
+        else:
+            raise TypeError()
 
     @abstractmethod
     def _add_row(self, row: pl.Series) -> None:
