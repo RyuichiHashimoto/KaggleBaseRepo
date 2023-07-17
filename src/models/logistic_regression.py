@@ -3,11 +3,11 @@ from dataclasses import dataclass
 from typing_extensions import TypeAlias
 from typing import Iterable, Union, Dict, Any
 from .exception import ModelWrapperError
-from .model_wrapper import model_wrapper, Parameter
+from .model_wrapper import model_wrapper, ModelParameter
 
 
 @dataclass(frozen=True)
-class LogisticRegression_Parameter(Parameter):
+class LogisticRegression_Parameter(ModelParameter):
     penalty: str
 
 

@@ -2,7 +2,7 @@ from abc import ABCMeta, abstractmethod
 from dataclasses import dataclass
 
 
-class Parameter(metaclass=ABCMeta):
+class ModelParameter(metaclass=ABCMeta):
     @classmethod
     def from_dict(cls, data):
         """

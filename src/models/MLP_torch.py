@@ -5,14 +5,14 @@ import numpy as np
 from tqdm import tqdm
 import polars as pl
 from .exception import ModelWrapperError, ModelAlreadyLearnedError
-from .model_wrapper import model_wrapper, Parameter
+from .model_wrapper import model_wrapper, ModelParameter
 from typing_extensions import TypeAlias
 from typing import Iterable, Union, Dict, Any
 from dataclasses import dataclass
 
 
 @dataclass(frozen=True)
-class MLP_Parameter(Parameter):
+class MLP_Parameter(ModelParameter):
     inputdim: int
     epochs: int
     lr: float

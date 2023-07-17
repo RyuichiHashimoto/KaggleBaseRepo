@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from typing_extensions import TypeAlias
 from typing import Iterable, Union, Dict, Any
 from .exception import ModelWrapperError
-from .model_wrapper import model_wrapper, Parameter
+from .model_wrapper import model_wrapper, ModelParameter
 from sklearn.ensemble import RandomForestClassifier as RF
 
 try:
@@ -13,7 +13,7 @@ except ImportError:
 
 
 @dataclass(frozen=True)
-class RandomForest_Parameter(Parameter):
+class RandomForest_Parameter(ModelParameter):
     cuda: bool = False
 
 
