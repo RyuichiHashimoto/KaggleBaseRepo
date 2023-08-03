@@ -1,20 +1,30 @@
 from dataclasses import dataclass
-from dataset.dataset import Dataset
+from dataset.dataset import Dataset, Parameter
 from typing import Tuple, Iterable, Union, List
 import numpy as np
 import polars as pl
-from typing_extensions import TypeAlias
-from dataset.timeseriesToyDataset.parameters import SteadyParameter, UnitRootParameter
-from typing import Dict, Any
-
-ARG_Parameter: TypeAlias = Tuple[Union[SteadyParameter, Dict[str, Any]], Union[UnitRootParameter, Dict[str, Any]]]
 
 
-class Steady2UnitRootDataset(Dataset):
-    def __init__(self, parameters: Iterable[ARG_Parameter]):
+@dataclass(frozen=True)
+class LinearParameter(Parameter):
+    slope: float
+    intercept: float
+    noize: float
+    size: int
+
+
+def _create_linearData(param: LinearParameter) -> pl.DataFrame:
+    linearData = np.linspace(0, param.size, param.size) * param.slope + param.intercept  # 線形データ
+    noize = np.random.normal(loc=0, scale=np.sqrt(param.noize), size=param.size)  # ノイズ
+
+    return linearData + noize
+
+
+class twoLinearDataset(Dataset):
+    def __init__(self, parameters: Tuple[LinearParameter, LinearParameter]):
         super().__init__()
         assert len(parameters) == 2
-        self.parameters = [SteadyParameter.from_dict(parameters[0]), UnitRootParameter.from_dict(parameters[1])]
+        self.parameters = [LinearParameter.from_dict(param) for param in parameters]
 
         self.X_COLUMNS: Tuple[str] = ("x",)
         self.Y_COLUMN: str = "y"
@@ -26,22 +36,15 @@ class Steady2UnitRootDataset(Dataset):
         df_list = []
         last_idx = 0
 
-        param1: SteadyParameter = self.parameters[0]
-        data = np.random.normal(loc=param1.mean, scale=np.sqrt(param1.var), size=param1.size)
-        idxs = [last_idx + 1 + i for i in range(0, param1.size)]
-        last_idx += param1.size
-        df1 = pl.DataFrame({self.X_COLUMNS[0]: data, "idx": idxs})
-        df1 = df1.with_columns(pl.lit(int(0)).alias(self.Y_COLUMN).cast(int))
+        for idx, param in enumerate(self.parameters):
+            data = _create_linearData(param)
+            idxs = [last_idx + 1 + i for i in range(0, param.size)]
+            df = pl.DataFrame({self.X_COLUMNS[0]: data, "idx": idxs})
+            df = df.with_columns(pl.lit(int(idx)).alias(self.Y_COLUMN).cast(int))
+            df_list.append(df)
+            last_idx += param.size
 
-        param2: UnitRootParameter = self.parameters[1]
-        noize = np.random.normal(loc=0, scale=np.sqrt(param2.var), size=param2.size)
-        data = np.linspace(0, param2.size, param2.size) * param2.slope + param2.intercept + noize
-        idxs = [last_idx + 1 + i for i in range(0, param2.size)]
-        last_idx += param2.size
-        df2 = pl.DataFrame({self.X_COLUMNS[0]: data, "idx": idxs})
-        df2 = df2.with_columns(pl.lit(int(0)).alias(self.Y_COLUMN).cast(int))
-
-        self.__data = pl.concat([df1, df2])
+        self.__data = pl.concat(df_list)
 
     @property
     def data(self) -> pl.DataFrame:
