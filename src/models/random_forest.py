@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from typing_extensions import TypeAlias
 from typing import Iterable, Union, Dict, Any
 from .exception import ModelWrapperError
-from .model_wrapper import model_wrapper, ModelParameter
+from .model_wrapper import modelBase, ModelParameter
 from sklearn.ensemble import RandomForestClassifier as RF
 
 try:
@@ -20,7 +20,7 @@ class RandomForest_Parameter(ModelParameter):
 ARG_Parameter: TypeAlias = Iterable[Union[RandomForest_Parameter, Dict[str, Any]]]
 
 
-class RandomForest(model_wrapper):
+class RandomForest(modelBase):
     def __init__(self, parameter: ARG_Parameter):
         self.parameter = RandomForest_Parameter.from_dict(parameter)
         self.__model = self._init_model()

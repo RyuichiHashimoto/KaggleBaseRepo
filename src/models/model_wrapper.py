@@ -29,7 +29,7 @@ class ModelParameter(metaclass=ABCMeta):
             raise TypeError("Expected dict or ExampleClass instance")
 
 
-class model_wrapper(metaclass=ABCMeta):
+class modelBase(metaclass=ABCMeta):
     """torchやsklaernなどの細かな実装違いを吸収するためのクラス"""
 
     __model = None

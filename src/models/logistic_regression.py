@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from typing_extensions import TypeAlias
 from typing import Iterable, Union, Dict, Any
 from .exception import ModelWrapperError
-from .model_wrapper import model_wrapper, ModelParameter
+from .model_wrapper import modelBase, ModelParameter
 
 
 @dataclass(frozen=True)
@@ -14,7 +14,7 @@ class LogisticRegression_Parameter(ModelParameter):
 ARG_Parameter: TypeAlias = Iterable[Union[LogisticRegression_Parameter, Dict[str, Any]]]
 
 
-class LogisticRegression(model_wrapper):
+class LogisticRegression(modelBase):
     def __init__(self, parameter: ARG_Parameter):
         self.parameter = LogisticRegression_Parameter.from_dict(parameter)
         self.__model = self._init_model()
