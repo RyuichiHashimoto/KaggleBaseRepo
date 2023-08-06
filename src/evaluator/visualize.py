@@ -83,3 +83,40 @@ def histplot(
             os.makedirs(directory, exist_ok=True)
 
         result.savefig(output_file_path)
+
+
+def lineplot(dataset: Dataset, x: str, y: str, hue: Optional[str], output_file_path: Optional[str] = None) -> None:
+    """lineplot
+
+    Parameters
+    ----------
+    dataset : Dataset
+        データセットクラス
+
+    x : str, optional
+        histplotするときのx軸
+
+    y : str, optional
+        histplotするときのy軸
+
+    hue : str, optional
+        データの色分けするときに使用するラベル。
+        もし設定されていない場合は、
+
+
+    output_file_path: str, optional
+        ファイル出力するときのパス
+        もし指定していなければ、ファイル保存しない。
+    """
+
+    if hue is None:
+        result = sns.lineplot(dataset.data, x=x, y=y, color=["green"])
+    else:
+        result = sns.lineplot(dataset.data, x=x, y=y, palette=["red", "blue"])
+
+    if output_file_path is not None:
+        if len(output_file_path.split("/")) != 1:
+            directory = "/".join(output_file_path.split("/")[:-1])
+            os.makedirs(directory, exist_ok=True)
+
+        result.savefig(output_file_path)
