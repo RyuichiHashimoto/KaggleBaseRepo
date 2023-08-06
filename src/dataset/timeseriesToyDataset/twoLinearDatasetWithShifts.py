@@ -1,34 +1,36 @@
 from dataclasses import dataclass
 from dataset.dataset import Dataset, Parameter
-from typing import Tuple, Iterable, Union, List
+from typing import Tuple, Union, List, Collection
 import numpy as np
 import polars as pl
 
 
 @dataclass(frozen=True)
-class LinearParameter(Parameter):
+class LinearWithShiftsParameter(Parameter):
+    n_shifts: int
     slope: float
     intercept: float
     noize: float
     size: int
 
 
-def _create_linearData(param: LinearParameter) -> pl.DataFrame:
+def _create_linearData(param: LinearWithShiftsParameter) -> pl.DataFrame:
     linearData = np.linspace(0, param.size, param.size) * param.slope + param.intercept  # 線形データ
     noize = np.random.normal(loc=0, scale=np.sqrt(param.noize), size=param.size)  # ノイズ
 
     return linearData + noize
 
 
-class twoLinearDataset(Dataset):
-    def __init__(self, parameters: Tuple[LinearParameter, LinearParameter]):
+class twoLinearDatasetWithShifts(Dataset):
+    def __init__(self, parameters: Tuple[LinearWithShiftsParameter, LinearWithShiftsParameter]):
         super().__init__()
         assert len(parameters) == 2
-        self.parameters = [LinearParameter.from_dict(param) for param in parameters]
+        assert parameters[0].n_shifts == parameters[1].n_shifts
 
-        self.X_COLUMNS: Tuple[str] = ("x",)
+        self.parameters = [LinearWithShiftsParameter.from_dict(param) for param in parameters]
+
+        self.X_COLUMNS: Tuple[str] = tuple(["x"] + [f"x{i+1}" for i in range(parameters[1].n_shifts)])
         self.Y_COLUMN: str = "y"
-        self._data: pl.DataFrame = pl.DataFrame({"x": [], "idx": [], "y": []})
 
         self._create_dataset()
 
@@ -41,7 +43,23 @@ class twoLinearDataset(Dataset):
             idxs = [last_idx + 1 + i for i in range(0, param.size)]
             df = pl.DataFrame({self.X_COLUMNS[0]: data, "idx": idxs})
             df = df.with_columns(pl.lit(int(idx)).alias(self.Y_COLUMN).cast(int))
+
+            for i in range(param.n_shifts):
+                df = df.with_columns(df.get_column("x").shift(i + 1).alias(f"x{i+1}"))
+
             df_list.append(df)
+
             last_idx += param.size
 
         self._data = pl.concat(df_list)
+
+    def drop_nulls(self, subset: Union[str, Collection[str]]) -> None:
+        """
+        指定した列({column_name})にnullがあるレコードを削除する
+
+        Parameters
+        ----------
+        column_name : str
+            nullがあるかチェックする列
+        """
+        self._data = self._data.drop_nulls(subset)

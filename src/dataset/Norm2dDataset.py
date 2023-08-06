@@ -27,7 +27,7 @@ class Norm2dDataset(Dataset):
 
         self.X_COLUMNS: Tuple[str, str] = ("x1", "x2")
         self.Y_COLUMN: str = "y"
-        self.__data: pl.DataFrame = pl.DataFrame({"x1": [], "x2": []})
+        self._data: pl.DataFrame = pl.DataFrame({"x1": [], "x2": []})
 
         self._create_dataset()
 
@@ -42,35 +42,4 @@ class Norm2dDataset(Dataset):
 
             df_list.append(df)
 
-        self.__data = pl.concat(df_list)
-
-    @property
-    def data(self) -> pl.DataFrame:
-        return self.__data
-
-    @property
-    def X(self) -> pl.DataFrame:
-        return self.__data.select(self.X_COLUMNS)
-
-    @property
-    def Y(self) -> pl.DataFrame:
-        return self.__data.select(self.Y_COLUMN)
-
-    def __setitem__(self, key: str, value: Union[pl.Series, np.ndarray]):
-        if type(value) is pl.Series:
-            self._add_row(value.alias(key))
-        elif type(value) is np.ndarray:
-            self._add_row(pl.Series(value).alias(key))
-        else:
-            raise ValueError(f"you must only polars.Series or np.ndarray, not {type(value)}")
-
-    def __getitem__(self, key: Union[str, List[str]]) -> pl.DataFrame:
-        if type(key) is str:
-            return self.__data.get_column(key)
-        elif type(key) is List[str]:
-            return self.__data.select(key)
-        else:
-            raise TypeError()
-
-    def _add_row(self, row: pl.Series) -> None:
-        self.__data = self.__data.with_columns(row)
+        self._data = pl.concat(df_list)

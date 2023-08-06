@@ -48,35 +48,6 @@ class DateDataset(Dataset):
             # df = df.with_columns(pl.lit(to_yyyymmdd(date)).alias("date").cast(str))
             df_list.append(df)
 
-        self.__data = pl.concat(df_list)
+        self._data = pl.concat(df_list)
         # self.__data = self.__data.with_columns(pl.lit(20).alias("all_packets").cast(int))
         # self.__data = self.__data.with_columns(pl.lit(10).alias("target_packets").cast(int))
-
-    @property
-    def data(self) -> pl.DataFrame:
-        return self.__data
-
-    @property
-    def X(self) -> pl.DataFrame:
-        return self.__data.select(self.X_COLUMNS)
-
-    @property
-    def Y(self) -> pl.DataFrame:
-        return self.__data.select(self.Y_COLUMN)
-
-    def __setitem__(self, key: str, value: Union[pl.Series, np.ndarray]):
-        if type(value) is pl.Series:
-            self._add_row(value.alias(key))
-        elif type(value) is np.ndarray:
-            self._add_row(pl.Series(value).alias(key))
-        else:
-            raise ValueError(f"you must only polars.Series or np.ndarray, not {type(value)}")
-
-    def __getitem__(self, key: Union[str, List[str]]) -> pl.DataFrame:
-        return self.__data.select(key)
-
-    def _add_row(self, row: pl.Series) -> None:
-        self.__data = self.__data.with_columns(row)
-
-    def _create_dataset(self, date: date, param: DateParameter) -> pl.DataFrame:
-        return pl.DataFrame()
