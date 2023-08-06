@@ -3,8 +3,9 @@ from dataclasses import dataclass
 from typing_extensions import TypeAlias
 from typing import Iterable, Union, Dict, Any
 from .exception import ModelWrapperError
-from .model_wrapper import modelBase, ModelParameter
+from .modelBase import ModelBase, ModelParameter
 from sklearn.ensemble import RandomForestClassifier as RF
+from models.modelFactory import ModelFactory
 
 try:
     from cuml.ensemble import RandomForestClassifier as cuRF
@@ -20,7 +21,8 @@ class RandomForest_Parameter(ModelParameter):
 ARG_Parameter: TypeAlias = Iterable[Union[RandomForest_Parameter, Dict[str, Any]]]
 
 
-class RandomForest(modelBase):
+@ModelFactory.register(RandomForest_Parameter)
+class RandomForest(ModelBase):
     def __init__(self, parameter: ARG_Parameter):
         self.parameter = RandomForest_Parameter.from_dict(parameter)
         self.__model = self._init_model()

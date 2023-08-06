@@ -1,8 +1,7 @@
 from abc import ABCMeta, abstractmethod
-from dataclasses import dataclass
 
 
-class ModelParameter(metaclass=ABCMeta):
+class ModelParameter:
     @classmethod
     def from_dict(cls, data):
         """
@@ -29,7 +28,7 @@ class ModelParameter(metaclass=ABCMeta):
             raise TypeError("Expected dict or ExampleClass instance")
 
 
-class modelBase(metaclass=ABCMeta):
+class ModelBase(metaclass=ABCMeta):
     """torchやsklaernなどの細かな実装違いを吸収するためのクラス"""
 
     __model = None
