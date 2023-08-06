@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.7.1-base-ubuntu22.04
+FROM nvidia/cuda:12.0.0-base-ubuntu22.04
 
 
 ENV TZ=Asia/Tokyo
@@ -38,5 +38,5 @@ curl -sSL https://install.python-poetry.org | python3.9 -  && \
 cd /usr/local/bin && ln -s /opt/poetry/bin/poetry &&\
 poetry config --local virtualenvs.in-project true
 
-RUN apt install build-essential
+#RUN apt install build-essential
 #USER $USERNAME
