@@ -26,7 +26,7 @@ class Parameter(metaclass=ABCMeta):
         elif isinstance(data, cls):
             return data
         else:
-            raise TypeError("Expected dict or ExampleClass instance")
+            raise TypeError("Expected dict or Parameter instance")
 
 
 class DRE(metaclass=ABCMeta):
