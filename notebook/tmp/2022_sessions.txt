@@ -1,0 +1,659 @@
+WEDNESDAY | 8:00AM
+Breakfast
+Speaker:
+Track:
+Location: Shoreline (South Convention Center - Level 2)
+WEDNESDAY | 9:00AM
+Keynote: Black Hat at 25: Where Do We Go from Here?
+Speaker: Chris Krebs
+Track:  Keynote
+Format: 60-Minute Keynote
+Location: Oceanside (Level 2)
+WEDNESDAY | 10:20AM
+AAD Joined Machines - The New Lateral Movement
+Speaker: Mor Rubin
+Tracks:  Cloud & Platform Security,  Network Security
+Format: 40-Minute Briefings
+Location: Lagoon HI (Level 2)
+Experience: In-Person/Virtual
+All Your GNN Models and Data Belong to Me
+Speaker: Yang Zhang, Azzedine Benameur, Yun Shen
+Tracks:  AI, ML, & Data Science,  Privacy
+Format: 40-Minute Briefings
+Location: Jasmine (Level 3)
+Experience: In-Person/Virtual
+Automatic Protocol Reverse Engineering
+Speaker: Gabi Nakibly, Ron Marcovich
+Tracks:  Network Security,  Reverse Engineering
+Format: 40-Minute Briefings
+Location: Lagoon KL (Level 2)
+Experience: In-Person/Virtual
+Blasting Event-Driven Cornucopia: WMI-based User-Space Attacks Blind SIEMs and EDRs
+Speaker: Claudiu Teodorescu, Andrey Golchikov, Igor Korkin
+Tracks:  Defense,  Reverse Engineering
+Format: 40-Minute Briefings
+Location: Islander FG (Level 0 - North Hall)
+Experience: In-Person/Virtual
+Browser-Powered Desync Attacks: A New Frontier in HTTP Request Smuggling
+Speaker: James Kettle
+Track:  Application Security
+Format: 40-Minute Briefings
+Location: Mandalay Bay GH (Level 2)
+Experience: In-Person/Virtual
+Elevating Kerberos to the Next Level
+Speaker: James Forshaw, Nick Landers
+Tracks:  Exploit Development,  Cloud & Platform Security
+Format: 40-Minute Briefings
+Location: South Pacific F (Level 0 - North Convention Center)
+Experience: In-Person/Virtual
+Harm Reduction: A Framework for Effective & Compassionate Security Guidance
+Speaker: Kyle Tobener
+Tracks:  Human Factors,  Defense
+Format: 40-Minute Briefings
+Location: South Seas CD (Level 3)
+Experience: In-Person/Virtual
+Industroyer2: Sandworm's Cyberwarfare Targets Ukraine's Power Grid Again
+Speaker: Robert Lipovsky, Anton Cherepanov
+Tracks:  Malware,  Cyber-Physical Systems
+Format: 40-Minute Briefings
+Location: Islander EI (Level 1)
+Experience: In-Person/Virtual
+New Memory Forensics Techniques to Defeat Device Monitoring Malware
+Speaker: Andrew Case, Gustavo Moreira, Austin Sellers, Golden Richard
+Tracks:  Data Forensics & Incident Response,  Malware
+Format: 40-Minute Briefings
+Location: South Seas AB (Level 3)
+Experience: In-Person/Virtual
+WEDNESDAY | 11:00AM
+Morning Break
+Speaker:
+Track:
+Location: Bay View Court North Corridor (N. Convention Ctr.); Bay View Court South Corridor (N. Convention Ctr.); Breakers Registration Corridor/Lagoon Corridor (Lvl. 2) & South Seas Foyer N./Jasmine Foyer N. (Lvl. 3)
+WEDNESDAY | 11:20AM
+A Fully Trained Jedi, You Are Not
+Speaker: Adam Shostack
+Tracks:  Application Security,  Community & Career
+Format: 40-Minute Briefings
+Location: Mandalay Bay GH (Level 2)
+Experience: In-Person/Virtual
+Android Universal Root: Exploiting Mobile GPU / Command Queue Drivers
+Speaker: Xingyu Jin, Richard Neal, Jon Bottarini
+Tracks:  Mobile,  Exploit Development
+Format: 40-Minute Briefings
+Location: South Pacific F (Level 0 - North Convention Center)
+Experience: In-Person/Virtual
+Better Privacy Through Offense: How To Build a Privacy Red Team
+Speaker: Scott Tenaglia
+Tracks:  Privacy,  Lessons Learned
+Format: 40-Minute Briefings
+Location: South Seas AB (Level 3)
+Experience: In-Person/Virtual
+Breaking Firmware Trust From Pre-EFI: Exploiting Early Boot Phases
+Speaker: Alex Matrosov, Alex Ermolov, Yegor Vasilenko, Sam Thomas
+Tracks:  Reverse Engineering,  Cloud & Platform Security
+Format: 40-Minute Briefings
+Location: Lagoon KL (Level 2)
+Experience: In-Person/Virtual
+Demystifying Key Stretching and PAKEs
+Speaker: Steve Thomas
+Track:  Cryptography
+Format: 40-Minute Briefings
+Location: South Seas CD (Level 3)
+Experience: In-Person/Virtual
+Devils Are in the File Descriptors: It Is Time To Catch Them All
+Speaker: Le Wu
+Tracks:  Cloud & Platform Security,  Lessons Learned
+Format: 40-Minute Briefings
+Location: Jasmine (Level 3)
+Experience: In-Person/Virtual
+Glitched on Earth by Humans: A Black-Box Security Evaluation of the SpaceX Starlink User Terminal
+Speaker: Lennert Wouters
+Tracks:  Hardware / Embedded,  Reverse Engineering
+Format: 40-Minute Briefings
+Location: Islander EI (Level 1)
+Experience: In-Person/Virtual
+IAM The One Who Knocks
+Speaker: Igal Gofman, Noam Dahan
+Tracks:  Enterprise Security,  Cloud & Platform Security
+Format: 40-Minute Briefings
+Location: Islander FG (Level 0 - North Hall)
+Experience: In-Person/Virtual
+The Growth of Global Election Disinformation: The Role and Methodology of Government-linked Cyber Actors
+Speaker: Sandra Quincoses
+Tracks:  Human Factors,  Defense
+Format: 40-Minute Briefings
+Location: Lagoon HI (Level 2)
+Experience: In-Person/Virtual
+WEDNESDAY | 12:00PM
+Lunch Break
+Speaker:
+Track:
+Location: Bayside DE (South Convention Center - Level 1)
+WEDNESDAY | 1:30PM
+ELF Section Docking: Revisiting Stageless Payload Delivery
+Speaker: Dimitry Snezhkov
+Tracks:  Malware,  Cloud & Platform Security
+Format: 40-Minute Briefings
+Location: South Seas AB (Level 3)
+Experience: In-Person/Virtual
+Google Reimagined a Phone. It was Our Job to Red Team and Secure it.
+Speaker: Farzan Karimi, Eugene Rodionov, Xuan Xing, Christopher Cole
+Tracks:  Mobile,  Hardware / Embedded
+Format: 40-Minute Briefings
+Location: South Pacific F (Level 0 - North Convention Center)
+Experience: In-Person/Virtual
+In Need of 'Pair' Review: Vulnerable Code Contributions by GitHub Copilot
+Speaker: Hammond Pearce, Benjamin Tan, Brendan Dolan-Gavitt, Baleegh Ahmad
+Track:  AI, ML, & Data Science
+Format: 40-Minute Briefings
+Location: South Seas CD (Level 3)
+Experience: In-Person/Virtual
+Internal Server Error: Exploiting Inter-Process Communication in SAP's HTTP Server
+Speaker: Martin Doyhenard
+Tracks:  Enterprise Security,  Application Security
+Format: 40-Minute Briefings
+Location: Islander EI (Level 1)
+Experience: In-Person/Virtual
+Is WebAssembly Really Safe? --Wasm VM Escape and RCE Vulnerabilities Have Been Found in New Way
+Speaker: Zhao Hai, Zhichen Wang, Mengchen Yu, Lei Li
+Tracks:  Exploit Development,  Cloud & Platform Security
+Format: 40-Minute Briefings
+Location: Jasmine (Level 3)
+Experience: In-Person/Virtual
+Let's Dance in the Cache - Destabilizing Hash Table on Microsoft IIS
+Speaker: Orange Tsai
+Track:  Application Security
+Format: 40-Minute Briefings
+Location: Mandalay Bay GH (Level 2)
+Experience: In-Person/Virtual
+The Cyber Safety Review Board: Studying Incidents to Drive Systemic Change
+Speaker: Robert Silvers, Heather Adkins, Jeff Moss
+Tracks:  Policy,  Application Security
+Format: 40-Minute Briefings
+Location: Lagoon KL (Level 2)
+Experience: In-Person/Virtual
+Trying to Be Everything to Everyone: Let’s Talk About Burnout
+Speaker: Stacy Thayer
+Track:  Community & Career
+Format: 40-Minute Briefings
+Location: Lagoon HI (Level 2)
+Experience: In-Person/Virtual
+WEDNESDAY | 2:30PM
+(Long) Dragon Tails – Measuring Dependence on International Vulnerability Research
+Speaker: Stewart Scott, Trey Herr, Frances Nettles, Yumi Gambrill
+Tracks:  Policy,  Human Factors
+Format: 30-Minute Briefings
+Location: Islander FG (Level 0 - North Hall)
+Experience: In-Person/Virtual
+AEPIC Leak: Architecturally Leaking Uninitialized Data from the Microarchitecture
+Speaker: Pietro Borrello, Andreas Kogler
+Tracks:  Hardware / Embedded,  Cloud & Platform Security
+Format: 30-Minute Briefings
+Location: South Pacific F (Level 0 - North Convention Center)
+Experience: In-Person/Virtual
+Return to Sender - Detecting Kernel Exploits with eBPF
+Speaker: Guillaume Fournier
+Tracks:  Defense,  Exploit Development
+Format: 30-Minute Briefings
+Location: South Seas CD (Level 3)
+Experience: In-Person/Virtual
+Smishmash - Text Based 2fa Spoofing Using OSINT, Phishing Techniques and a Burner Phone
+Speaker: Thomas Olofsson, Mikael Byström
+Tracks:  Human Factors,  Mobile
+Format: 30-Minute Briefings
+Location: Lagoon HI (Level 2)
+Experience: In-Person/Virtual
+sOfT7: Revealing the Secrets of Siemens S7 PLCs
+Speaker: Maxim‬ Barsky, Eli Biham, Sara Bitan, Alon Dankner, Idan Raz
+Tracks:  Cyber-Physical Systems,  Hardware / Embedded
+Format: 30-Minute Briefings
+Location: Islander EI (Level 1)
+Experience: In-Person/Virtual
+Stalloris: RPKI Downgrade Attack
+Speaker: Philipp Jeitner, Haya Shulman, Michael Waidner, Donika Mirdita, Tomas Hlavecek
+Track:  Network Security
+Format: 30-Minute Briefings
+Location: South Seas AB (Level 3)
+Experience: In-Person/Virtual
+The Open Threat Hunting Framework: Enabling Organizations to Build, Operationalize, and Scale Threat Hunting
+Speaker: John Dwyer, Neil Wyler, Sameer Koranne
+Tracks:  Lessons Learned,  Data Forensics & Incident Response
+Format: 30-Minute Briefings
+Location: Mandalay Bay GH (Level 2)
+Experience: In-Person/Virtual
+To Flexibly Tame Kernel Execution With Onsite Analysis
+Speaker: Xuhua Ding
+Tracks:  Reverse Engineering,  Cloud & Platform Security
+Format: 30-Minute Briefings
+Location: Jasmine (Level 3)
+Experience: In-Person/Virtual
+Trust Dies in Darkness: Shedding Light on Samsung's TrustZone Keymaster Design
+Speaker: Alon Shakevsky, Eyal Ronen, Avishai Wool
+Tracks:  Mobile,  Cryptography
+Format: 30-Minute Briefings
+Location: Lagoon KL (Level 2)
+Experience: In-Person/Virtual
+WEDNESDAY | 3:00PM
+Afternoon Break
+Speaker:
+Track:
+Location: Bay View Court North Corridor (N. Convention Ctr.); Bay View Court South Corridor (N. Convention Ctr.); Breakers Registration Corridor/Lagoon Corridor (Lvl. 2) & South Seas Foyer N./Jasmine Foyer N. (Lvl. 3)
+WEDNESDAY | 3:20PM
+Backdooring and Hijacking Azure AD Accounts by Abusing External Identities
+Speaker: Dirk-jan Mollema
+Tracks:  Cloud & Platform Security,  Enterprise Security
+Format: 40-Minute Briefings
+Location: South Pacific F (Level 0 - North Convention Center)
+Experience: In-Person/Virtual
+BrokenMesh: New Attack Surfaces of Bluetooth Mesh
+Speaker: Han Yan, Lewei Qu, Dongxiang Ke
+Tracks:  Network Security,  Hardware / Embedded
+Format: 40-Minute Briefings
+Location: Jasmine (Level 3)
+Experience: In-Person/Virtual
+Fault-Injection Detection Circuits: Design, Calibration, Validation and Tuning
+Speaker: Daniel Nemiroff, Carlos Tokunaga
+Tracks:  Defense,  Hardware / Embedded
+Format: 40-Minute Briefings
+Location: Islander FG (Level 0 - North Hall)
+Experience: In-Person/Virtual
+I Am Whoever I Say I Am: Infiltrating Identity Providers Using a 0Click Exploit
+Speaker: Steven Seeley
+Tracks:  Enterprise Security,  Application Security
+Format: 40-Minute Briefings
+Location: South Seas AB (Level 3)
+Experience: In-Person/Virtual
+Invisible Finger: Practical Electromagnetic Interference Attack on Touchscreen-based Electronic Devices
+Speaker: Haoqi Shan, Boyi Zhang, Yier Jin, Shuo Wang
+Tracks:  Hardware / Embedded,  Mobile
+Format: 40-Minute Briefings
+Location: Lagoon KL (Level 2)
+Experience: In-Person/Virtual
+Monitoring Surveillance Vendors: A Deep Dive into In-the-Wild Android Full Chains in 2021
+Speaker: Xingyu Jin, Richard Neal, Christian Resell, Clement Lecigne
+Tracks:  Mobile,  Exploit Development
+Format: 40-Minute Briefings
+Location: South Seas CD (Level 3)
+Experience: In-Person/Virtual
+No One Is Entitled to Their Own Facts, Except in Cybersecurity? Presenting an Investigation Handbook To Develop a Shared Narrative of Major Cyber Incidents
+Speaker: Victoria Ontiveros, Tarah Wheeler
+Tracks:  Policy,  Lessons Learned
+Format: 40-Minute Briefings
+Location: Mandalay Bay GH (Level 2)
+Experience: In-Person/Virtual
+RCE-as-a-Service: Lessons Learned from 5 Years of Real-World CI/CD Pipeline Compromise
+Speaker: Iain Smart, Viktor Gazdag
+Tracks:  Lessons Learned,  Enterprise Security
+Format: 40-Minute Briefings
+Location: Lagoon HI (Level 2)
+Experience: In-Person/Virtual
+Real 'Cyber War': Espionage, DDoS, Leaks, and Wipers in the Russian Invasion of Ukraine
+Speaker: Juan Andres Guerrero-Saade, Tom Hegel
+Tracks:  Malware,  Policy
+Format: 40-Minute Briefings
+Location: Islander EI (Level 1)
+Experience: In-Person/Virtual
+WEDNESDAY | 4:20PM
+A Journey Into Fuzzing WebAssembly Virtual Machines
+Speaker: Patrick Ventuzelo
+Tracks:  Reverse Engineering,  Application Security
+Format: 40-Minute Briefings
+Location: South Pacific F (Level 0 - North Convention Center)
+Experience: In-Person/Virtual
+A New Trend for the Blue Team - Using a Practical Symbolic Engine to Detect Evasive Forms of Malware/Ransomware
+Speaker: Sheng-Hao Ma, Mars Cheng, Hank Chen
+Tracks:  Data Forensics & Incident Response,  Defense
+Format: 40-Minute Briefings
+Location: Lagoon KL (Level 2)
+Experience: In-Person/Virtual
+Attacks From a New Front Door in 4G & 5G Mobile Networks
+Speaker: Altaf Shaik, Shinjo Park, Matteo Strada
+Tracks:  Mobile,  Network Security
+Format: 40-Minute Briefings
+Location: Islander FG (Level 0 - North Hall)
+Experience: In-Person/Virtual
+Breaking the Chrome Sandbox with Mojo
+Speaker: Stephen Röttger
+Track:  Exploit Development
+Format: 40-Minute Briefings
+Location: Mandalay Bay GH (Level 2)
+Experience: In-Person/Virtual
+Dive Into Apple IO80211Family Vol. 2
+Speaker: Yu Wang
+Tracks:  Network Security,  Reverse Engineering
+Format: 40-Minute Briefings
+Location: Jasmine (Level 3)
+Experience: In-Person/Virtual
+GPT-3 and Me: How Supercomputer-scale Neural Network Models Apply to Defensive Cybersecurity Problems
+Speaker: Joshua Saxe, Younghoo Lee
+Tracks:  AI, ML, & Data Science,  Network Security
+Format: 40-Minute Briefings
+Location: South Seas CD (Level 3)
+Experience: In-Person/Virtual
+Trace Me if You Can: Bypassing Linux Syscall Tracing
+Speaker: Rex Guo, Junyuan Zeng
+Tracks:  Cloud & Platform Security,  Exploit Development
+Format: 40-Minute Briefings
+Location: South Seas AB (Level 3)
+Experience: In-Person/Virtual
+Unlimited Results: Breaking Firmware Encryption of ESP32-V3
+Speaker: Karim Abdellatif, Olivier Hériveaux, Adrian Thillard
+Tracks:  Cryptography,  Hardware / Embedded
+Format: 40-Minute Briefings
+Location: Lagoon HI (Level 2)
+Experience: In-Person/Virtual
+UWB Real Time Locating Systems: How Secure Radio Communications May Fail in Practice
+Speaker: Andrea Palanca, Luca Cremona, Roya Gordon
+Tracks:  Cyber-Physical Systems,  Network Security
+Format: 40-Minute Briefings
+Location: Islander EI (Level 1)
+Experience: In-Person/Virtual
+THURSDAY | 8:00AM
+Breakfast
+Speaker:
+Track:
+Location: Shoreline (South Convention Center - Level 2)
+THURSDAY | 9:00AM
+Pre-Stuxnet, Post-Stuxnet: Everything Has Changed, Nothing Has Changed
+Speaker: Kim Zetter
+Track:  Keynote
+Format: 60-Minute Keynote
+Location: Oceanside (Level 2)
+Experience: In-Person/Virtual
+THURSDAY | 10:20AM
+Bug Bounty Evolution: Not Your Grandson's Bug Bounty
+Speaker: Katie Moussouris
+Tracks:  Lessons Learned,  Application Security
+Format: 40-Minute Briefings
+Location: Mandalay Bay GH (Level 2)
+Experience: In-Person/Virtual
+CastGuard: Mitigating Type Confusion in C++
+Speaker: Joe Bialek
+Tracks:  Defense,  Application Security
+Format: 40-Minute Briefings
+Location: South Seas AB (Level 3)
+Experience: In-Person/Virtual
+Do Not Trust the ASA, Trojans!
+Speaker: Jacob Baines
+Tracks:  Network Security,  Hardware / Embedded
+Format: 40-Minute Briefings
+Location: Islander EI (Level 1)
+Experience: In-Person/Virtual
+ElectroVolt: Pwning Popular Desktop Apps While Uncovering New Attack Surface on Electron
+Speaker: Aaditya Purani, Max Garrett, Mohan Sri Rama Krishna Pedhapati, William Bowling
+Tracks:  Application Security,  Exploit Development
+Format: 40-Minute Briefings
+Location: South Pacific F (Level 0 - North Convention Center)
+Experience: In-Person/Virtual
+Ghost in the Wireless, iwlwifi Edition
+Speaker: Nicolas Iooss, Gabriel Campana
+Track:  Hardware / Embedded
+Format: 40-Minute Briefings
+Location: Lagoon HI (Level 2)
+Experience: In-Person/Virtual
+Perimeter Breached! Hacking an Access Control System
+Speaker: Steve Povolny, Sam Quinn
+Tracks:  Cyber-Physical Systems,  Network Security
+Format: 40-Minute Briefings
+Location: Islander FG (Level 0 - North Hall)
+Experience: In-Person/Virtual
+Process Injection: Breaking All macOS Security Layers With a Single Vulnerability
+Speaker: Thijs Alkemade
+Tracks:  Cloud & Platform Security,  Application Security
+Format: 40-Minute Briefings
+Location: South Seas CD (Level 3)
+Experience: In-Person/Virtual
+Ret2page: The Art of Exploiting Use-After-Free Vulnerabilities in the Dedicated Cache
+Speaker: Yong Wang
+Tracks:  Exploit Development,  Cloud & Platform Security
+Format: 40-Minute Briefings
+Location: Jasmine (Level 3)
+Experience: In-Person/Virtual
+Whip the Whisperer: Simulating Side Channel Leakage
+Speaker: Jasper van Woudenberg
+Tracks:  Cryptography,  Cloud & Platform Security
+Format: 40-Minute Briefings
+Location: Lagoon KL (Level 2)
+Experience: In-Person/Virtual
+THURSDAY | 11:00AM
+Morning Break
+Speaker:
+Track:
+Location: Bay View Court North Corridor (N. Convention Ctr.); Bay View Court South Corridor (N. Convention Ctr.); Breakers Registration Corridor/Lagoon Corridor (Lvl. 2) & South Seas Foyer N./Jasmine Foyer N. (Lvl. 3)
+THURSDAY | 11:20AM
+Bug Hunters Dump User Data. Can They Keep it? Well They're Keeping it Anyway.
+Speaker: Dylan Ayrey, Whitney Merrill
+Tracks:  Privacy,  Application Security
+Format: 40-Minute Briefings
+Location: Mandalay Bay GH (Level 2)
+Experience: In-Person/Virtual
+Calculating Risk in the Era of Obscurity: Reading Between the Lines of Security Advisories
+Speaker: Brian Gorenc, Dustin Childs
+Tracks:  Policy,  Defense
+Format: 40-Minute Briefings
+Location: Islander EI (Level 1)
+Experience: In-Person/Virtual
+From Hackathon to Hacked: Web3's Security Journey
+Speaker: Nathan Hamiel
+Track:  Application Security
+Format: 40-Minute Briefings
+Location: South Pacific F (Level 0 - North Convention Center)
+Experience: In-Person/Virtual
+Go With the Flow: Enforcing Program Behavior Through Syscall Sequences and Origins
+Speaker: Claudio Canella
+Track:  Defense
+Format: 40-Minute Briefings
+Location: Islander FG (Level 0 - North Hall)
+Experience: In-Person/Virtual
+Kubernetes Privilege Escalation: Container Escape == Cluster Admin?
+Speaker: Yuval Avrahami, Shaul Ben Hai
+Track:  Cloud & Platform Security
+Format: 40-Minute Briefings
+Location: Lagoon KL (Level 2)
+Experience: In-Person/Virtual
+Leveraging the Apple ESF for Behavioral Detections
+Speaker: Jaron Bradley, Matt Benyo
+Tracks:  Malware,  Defense
+Format: 40-Minute Briefings
+Location: South Seas CD (Level 3)
+Experience: In-Person/Virtual
+Oops..! I Glitched It Again! How to Multi-Glitch the Glitching-Protections on ARM TrustZone-M
+Speaker: Ahmad-Reza Sadeghi, Richard Mitev, Marvin Saß
+Tracks:  Hardware / Embedded,  Cyber-Physical Systems
+Format: 40-Minute Briefings
+Location: Jasmine (Level 3)
+Experience: In-Person/Virtual
+Pwning Cloud Vendors with Untraditional PostgreSQL Vulnerabilities
+Speaker: Shir Tamari, Nir Ohfeld
+Tracks:  Cloud & Platform Security,  Exploit Development
+Format: 40-Minute Briefings
+Location: Lagoon HI (Level 2)
+Experience: In-Person/Virtual
+XMPP Stanza Smuggling or How I Hacked Zoom
+Speaker: Ivan Fratric
+Tracks:  Enterprise Security,  Exploit Development
+Format: 40-Minute Briefings
+Location: South Seas AB (Level 3)
+Experience: In-Person/Virtual
+THURSDAY | 12:00PM
+Lunch Break
+Speaker:
+Track:
+Location: Bayside DE (South Convention Center - Level 1)
+THURSDAY | 1:30PM
+"No Mr. Cyber Threat!" - A Psychological Approach To Managing the Fail-to-Challenge Vulnerability
+Speaker: Simon Pavitt, Stephen Dewsnip
+Track:  Human Factors
+Format: 40-Minute Briefings
+Location: Lagoon KL (Level 2)
+Experience: In-Person/Virtual
+Catch Me If You Can: Deterministic Discovery of Race Conditions with Fuzzing
+Speaker: Ned Williamson
+Track:  Application Security
+Format: 40-Minute Briefings
+Location: South Pacific F (Level 0 - North Convention Center)
+Experience: In-Person/Virtual
+Cautious: A New Exploitation Method! No Pipe but as Nasty as Dirty Pipe
+Speaker: Zhenpeng Lin, Yuhang Wu, Xinyu Xing
+Track:  Exploit Development
+Format: 40-Minute Briefings
+Location: Islander FG (Level 0 - North Hall)
+Experience: In-Person/Virtual
+eBPF ELFs JMPing Through the Windows
+Speaker: Richard Johnson
+Tracks:  Cloud & Platform Security,  Exploit Development
+Format: 40-Minute Briefings
+Location: South Seas AB (Level 3)
+Experience: In-Person/Virtual
+Living Off the Walled Garden: Abusing the Features of the Early Launch Antimalware Ecosystem
+Speaker: Matt Graeber
+Tracks:  Malware,  Reverse Engineering
+Format: 40-Minute Briefings
+Location: Mandalay Bay GH (Level 2)
+Experience: In-Person/Virtual
+RollBack - A New Time-Agnostic Replay Attack Against the Automotive Remote Keyless Entry Systems
+Speaker: Levente Csikor, Hoon Wei Lim, Jun Wen Wong, Soundarya Ramesh, Rohini Poolat Parameswarath, Chan Mun Choon
+Tracks:  Cyber-Physical Systems,  Hardware / Embedded
+Format: 40-Minute Briefings
+Location: Islander EI (Level 1)
+Experience: In-Person/Virtual
+Talent Need Not Apply: Tradecraft and Objectives of Job-themed APT Social Engineering
+Speaker: Sveva Vittoria Scenarelli, Allison Wikoff
+Tracks:  Data Forensics & Incident Response,  Community & Career
+Format: 40-Minute Briefings
+Location: Lagoon HI (Level 2)
+Experience: In-Person/Virtual
+The Battle Against the Billion-Scale Internet Underground Industry: Advertising Fraud Detection and Defense
+Speaker: Zheng Huang, Shupeng Gao, Yakun Zhang, Hai Yang, Jie Gao
+Tracks:  Defense,  Human Factors
+Format: 40-Minute Briefings
+Location: Jasmine (Level 3)
+Experience: In-Person/Virtual
+TruEMU: An Extensible, Open-Source, Whole-System iOS Emulator
+Speaker: Trung Nguyen, Kyungtae Kim, Antonio Bianchi, Dave (Jing) Tian
+Tracks:  Mobile,  Reverse Engineering
+Format: 40-Minute Briefings
+Location: South Seas CD (Level 3)
+Experience: In-Person/Virtual
+THURSDAY | 2:30PM
+Another Way to Talk with Browser: Exploiting Chrome at Network Layer
+Speaker: Rong Jian, Guang Gong
+Track:  Exploit Development
+Format: 30-Minute Briefings
+Location: Jasmine (Level 3)
+Experience: In-Person/Virtual
+Chasing Your Tail With a Raspberry Pi
+Speaker: Matt Edmondson
+Tracks:  Privacy,  Lessons Learned
+Format: 30-Minute Briefings
+Location: South Seas AB (Level 3)
+Experience: In-Person/Virtual
+Custom Processing Unit: Tracing and Patching Intel Atom Microcode
+Speaker: Pietro Borrello, Martin Schwarzl
+Tracks:  Reverse Engineering,  Cloud & Platform Security
+Format: 30-Minute Briefings
+Location: South Pacific F (Level 0 - North Convention Center)
+Experience: In-Person/Virtual
+DirectX: The New Hyper-V Attack Surface
+Speaker: Zhenhao Hong, Ziming Zhang
+Tracks:  Reverse Engineering,  Cloud & Platform Security
+Format: 30-Minute Briefings
+Location: Lagoon KL (Level 2)
+Experience: In-Person/Virtual
+DNSSEC Downgrade Attacks
+Speaker: Haya Shulman, Elias Heftrig, Michael Waidner
+Tracks:  Cryptography,  Network Security
+Format: 30-Minute Briefings
+Location: Islander FG (Level 0 - North Hall)
+Experience: In-Person/Virtual
+Don't Get Owned by Your Dependencies: How Firefox Uses In-process Sandboxing To Protect Itself From Exploitable Libraries (And You Can Too!)
+Speaker: Shravan Narayan, Tal Garfinkel, Deian Stefan
+Tracks:  Defense,  Application Security
+Format: 30-Minute Briefings
+Location: South Seas CD (Level 3)
+Experience: In-Person/Virtual
+Déjà Vu: Uncovering Stolen Algorithms in Commercial Products
+Speaker: Patrick Wardle, Tom McGuire
+Tracks:  Community & Career,  Reverse Engineering
+Format: 30-Minute Briefings
+Location: Mandalay Bay GH (Level 2)
+Experience: In-Person/Virtual
+Eliminating Triage Intermediaries for Zero-day Exploits Using a Decentralised Payout Protocol
+Speaker: Clara Maine, Akke Toeter, Victoria Bosch, Subhechha Subudhi
+Tracks:  Policy,  Defense
+Format: 30-Minute Briefings
+Location: Lagoon HI (Level 2)
+Experience: In-Person/Virtual
+Malware Classification With Machine Learning Enhanced by Windows Kernel Emulation
+Speaker: Dmitrijs Trizna
+Tracks:  AI, ML, & Data Science,  Malware
+Format: 30-Minute Briefings
+Location: Islander EI (Level 1)
+Experience: In-Person/Virtual
+THURSDAY | 3:00PM
+Afternoon Break
+Speaker:
+Track:
+Location: Bay View Court North Corridor (N. Convention Ctr.); Bay View Court South Corridor (N. Convention Ctr.); Breakers Registration Corridor/Lagoon Corridor (Lvl. 2) & South Seas Foyer N./Jasmine Foyer N. (Lvl. 3)
+THURSDAY | 3:20PM
+A Dirty Little History: Bypassing Spectre Hardware Defenses to Leak Kernel Data
+Speaker: Pietro Frigo, Enrico Barberis, Marius Muench
+Tracks:  Hardware / Embedded,  Exploit Development
+Format: 40-Minute Briefings
+Location: South Seas CD (Level 3)
+Experience: In-Person/Virtual
+Attack on Titan M, Reloaded: Vulnerability Research on a Modern Security Chip
+Speaker: Damiano Melotti, Maxime Rossi Bellom
+Tracks:  Mobile,  Hardware / Embedded
+Format: 40-Minute Briefings
+Location: Islander FG (Level 0 - North Hall)
+Experience: In-Person/Virtual
+Charged by an Elephant – An APT Fabricating Evidence to Throw You In Jail
+Speaker: Juan Andres Guerrero-Saade, Tom Hegel
+Tracks:  Privacy,  Malware
+Format: 40-Minute Briefings
+Location: South Pacific F (Level 0 - North Convention Center)
+Experience: In-Person/Virtual
+Controlling the Source: Abusing Source Code Management Systems
+Speaker: Brett Hawkins
+Tracks:  Enterprise Security,  Lessons Learned
+Format: 40-Minute Briefings
+Location: Islander EI (Level 1)
+Experience: In-Person/Virtual
+Human or Not: Can You Really Detect the Fake Voices?
+Speaker: Xin Liu, Yuan Tan, Rui Chong, Xiaokang Zhou, Mingyuan Zhang, Qingguo Zhou
+Tracks:  AI, ML, & Data Science,  Defense
+Format: 40-Minute Briefings
+Location: Jasmine (Level 3)
+Experience: In-Person/Virtual
+Scaling the Security Researcher to Eliminate OSS Vulnerabilities Once and For All
+Speaker: Jonathan Leitschuh, Patrick Way, Shyam Mehta
+Tracks:  Application Security,  Defense
+Format: 40-Minute Briefings
+Location: South Seas AB (Level 3)
+Experience: In-Person/Virtual
+The 8th Annual Black Hat USA NOC Report
+Speaker: Neil Wyler, Bart Stump
+Tracks:  Network Security,  Application Security
+Format: 40-Minute Briefings
+Location: Mandalay Bay GH (Level 2)
+Experience: In-Person/Virtual
+The COW (Container On Windows) Who Escaped the Silo
+Speaker: Eran Segal
+Tracks:  Cloud & Platform Security,  Reverse Engineering
+Format: 40-Minute Briefings
+Location: Lagoon HI (Level 2)
+Experience: In-Person/Virtual
+The Journey of Hunting In-the-Wild Windows LPE 0day
+Speaker: Quan Jin
+Tracks:  Malware,  Cloud & Platform Security
+Format: 40-Minute Briefings
+Location: Lagoon KL (Level 2)
+Experience: In-Person/Virtual
+THURSDAY | 4:20PM
+Locknote: Conclusions and Key Takeaways from Black Hat USA 2022
+Speaker: Jeff Moss, Justine Bone, Chris Eng, Natalie Silvanovich, Matt Suiche
+Tracks:  Keynote,  Lessons Learned
+Format: 40-Minute Briefings
+Location: Mandalay Bay GH (Level 2)
+Experience: In-Person/Virtua

@@ -1,0 +1,20 @@
+AI, ML, & Data Science
+Application Security
+Cloud & Platform Security
+Community & Career
+Cryptography
+Cyber-Physical Systems
+Data Forensics & Incident Response
+Defense
+Enterprise Security
+Exploit Development
+Hardware / Embedded
+Human Factors
+Keynote
+Lessons Learned
+Malware
+Mobile
+Network Security
+Policy
+Privacy
+Reverse Engineering
