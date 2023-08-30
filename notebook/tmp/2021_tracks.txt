@@ -1,0 +1,19 @@
+AI, ML, & Data Science
+AppSec
+Applied Security
+Cloud & Platform Security
+Community
+CorpSec
+Cryptography
+Cyber-Physical Systems
+Data Forensics & Incident Response
+Defense
+Exploit Development
+Hardware / Embedded
+Human Factors
+Keynote
+Malware
+Mobile
+Network Security
+Policy
+Reverse Engineering
