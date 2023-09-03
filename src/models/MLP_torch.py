@@ -99,6 +99,7 @@ def _predict(model: nn.Module, X: torch.Tensor, parameter: MLP_Parameter) -> tor
         X = X.cuda()
 
     with torch.no_grad():
+        model.eval()
         pred = model(X)
 
     if parameter.cuda:
