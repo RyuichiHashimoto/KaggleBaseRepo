@@ -1,15 +1,18 @@
 from dataset.timeseriesToyDataset.twoLinearDataset import LinearParameter
-from dataset.timeseriesToyDataset.twoLinearDatasetWithShifts import LinearWithShiftsParameter
+from dataset.timeseriesToyDataset.timeSeriesDataset import timeSeriesParameter
+from dataset.timeseriesToyDataset.timeSeriesDatasetWithShifts import timeSeriesWithShiftsParameter
 from typing import Iterable
 
 
-def add_shifts_to_linear_param(param: LinearParameter, n_shift: int) -> LinearWithShiftsParameter:
-    return LinearWithShiftsParameter(n_shift, param.slope, param.intercept, param.noize, param.size)
+def add_shifts_to_linear_param(param: timeSeriesParameter, n_shift: int) -> timeSeriesWithShiftsParameter:
+    return timeSeriesWithShiftsParameter(
+        n_shift, param.slope, param.intercept, param.noize, param.size, param.period, param.amplitude
+    )
 
 
 def add_shifts_to_linear_params(
     parameters: Iterable[LinearParameter], n_shift: int
-) -> tuple[LinearWithShiftsParameter]:
+) -> tuple[timeSeriesWithShiftsParameter]:
     return tuple([add_shifts_to_linear_param(param, n_shift) for param in parameters])
 
 
