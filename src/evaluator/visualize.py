@@ -110,7 +110,7 @@ def lineplot(dataset: Dataset, x: str, y: str, hue: Optional[str], output_file_p
     """
 
     if hue is None:
-        result = sns.lineplot(dataset.data, x=x, y=y, color=["green"])
+        result = sns.lineplot(dataset.data, x=x, y=y, color="green")
     else:
         result = sns.lineplot(dataset.data, x=x, y=y, palette=["red", "blue"])
 
